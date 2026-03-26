@@ -1,0 +1,19 @@
+Using device: cuda
+Loading test data from /home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz...
+Loading weights from /home/jay_agarwal_2022/kd-lgatr/mlp_scratch_engd/baseline_scratch_mlp.pt...
+Evaluating model...
+
+=============================================
+   BASELINE MLP (SCRATCH) TEST RESULTS   
+=============================================
+AUC:                     0.9501
+Optimal Threshold:       0.2222
+Calibrated Accuracy:     0.8875
+---------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      110
+  @ 50% Signal Eff:      45
+  @ 80% Signal Eff:      13
+=============================================
+✓ Saved ROC Curve to 'roc_curve_baseline.png'
+✓ Saved Probability Distribution to 'prob_dist_baseline.png'

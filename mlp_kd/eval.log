@@ -1,0 +1,17 @@
+Using device: cuda
+Loading test subset from /home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz...
+Loading student weights from distilled_student_mlp.pt...
+Evaluating model...
+
+=============================================
+        TEST SET EVALUATION RESULTS        
+=============================================
+AUC:                     0.7492
+Optimal Threshold:       0.0057
+Calibrated Accuracy:     0.7218
+---------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      19
+  @ 50% Signal Eff:      3
+  @ 80% Signal Eff:      2
+=============================================

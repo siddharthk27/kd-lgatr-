@@ -1,0 +1,19 @@
+Using device: cuda
+Loading test data from /home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz...
+Loading weights from distilled_engineered_mlp.pt...
+Evaluating model...
+
+==================================================
+ KD ENGINEERED STUDENT (MLP) TEST RESULTS 
+==================================================
+AUC:                     0.7890
+Optimal Threshold:       0.0466
+Calibrated Accuracy:     0.7184
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      20
+  @ 50% Signal Eff:      6
+  @ 80% Signal Eff:      3
+==================================================
+✓ Saved ROC Curve to 'roc_curve_kd_engineered.png'
+✓ Saved Probability Distribution to 'prob_dist_kd_engineered.png'

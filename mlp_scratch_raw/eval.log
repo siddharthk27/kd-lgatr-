@@ -1,0 +1,19 @@
+Using device: cuda
+Loading test data from /home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz...
+Loading weights from baseline_raw_cartesian_mlp.pt...
+Evaluating model...
+
+==================================================
+ RAW CARTESIAN BASELINE (MLP) TEST RESULTS 
+==================================================
+AUC:                     0.9411
+Optimal Threshold:       0.3759
+Calibrated Accuracy:     0.8814
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      66
+  @ 50% Signal Eff:      28
+  @ 80% Signal Eff:      10
+==================================================
+✓ Saved ROC Curve to 'roc_curve_raw_cartesian.png'
+✓ Saved Probability Distribution to 'prob_dist_raw_cartesian.png'
