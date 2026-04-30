@@ -198,7 +198,7 @@ def main():
     DATA_PATH = "/home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz" 
     TEACHER_CHECKPOINT = "/home/jay_agarwal_2022/lorentz-gatr/runs/topt/GATr_7327/models/model_run0_it169999.pt"
     
-    BATCH_SIZE = 64      
+    BATCH_SIZE = 512      
     LR = 0.0002          
     ALPHA = 0.5          
     TEMPERATURE = 4.0    
@@ -226,7 +226,7 @@ def main():
         param.requires_grad = False
 
     # Student Setup
-    student_model = StudentMLP(d_input=4, d_ff=512, d_output=1, depth=3, dropout=0.0).to(device)
+    student_model = StudentMLP(d_input=4, d_ff=512, d_output=1, depth=6, dropout=0.0).to(device)
     
     # GPU Parallelization
     if torch.cuda.device_count() > 1:
@@ -268,8 +268,7 @@ def main():
             total_loss += loss.item()
 
             if batch_idx % 200 == 0:
-                display_loss = (ALPHA * (soft_loss / (TEMPERATURE**2))) + ((1.0 - ALPHA) * hard_loss)
-                print(f"Epoch {epoch+1}/{EPOCHS} | Batch {batch_idx}/{len(dataloader)} | KD Loss: {loss.item():.4f} | Base Loss: {display_loss.item():.4f}")
+                print(f"Epoch {epoch+1}/{EPOCHS} | Batch {batch_idx}/{len(dataloader)} | Soft KD Loss: {soft_loss.item():.4f} | Hard Loss: {hard_loss.item():.4f} | Total Loss: {loss.item():.4f} | LR: {optimizer.param_groups[0]['lr']:.6f}")
 
         avg_loss = total_loss / len(dataloader)
         scheduler.step(avg_loss)
@@ -277,7 +276,7 @@ def main():
 
     # Save logic that handles the DataParallel unwrapping automatically
     save_model = student_model.module if isinstance(student_model, nn.DataParallel) else student_model
-    torch.save(save_model.state_dict(), "distilled_engineered_mlp.pt")
+    torch.save(save_model.state_dict(), "distilled_engineered_mlp_depth6.pt")
     print("\nTraining Complete! Engineered Student saved.")
 
 if __name__ == "__main__":

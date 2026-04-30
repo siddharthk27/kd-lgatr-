@@ -89,7 +89,7 @@ class EngineeredStudentTestDataset(Dataset):
 def main():
     # --- PATHS ---
     DATA_PATH = "/home/jay_agarwal_2022/lorentz-gatr/data/toptagging_full.npz" 
-    MODEL_WEIGHTS = "distilled_engineered_mlp.pt" # Points to the newly trained KD model
+    MODEL_WEIGHTS = "distilled_engineered_mlp_depth6.pt" # Points to the newly trained KD model
     BATCH_SIZE = 1024
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -100,7 +100,7 @@ def main():
     dataloader = DataLoader(dataset, batch_size=BATCH_SIZE, shuffle=False, num_workers=8, pin_memory=True)
 
     # 2. Initialize Model
-    model = StudentMLP(d_input=4, d_ff=512, d_output=1, depth=3).to(device)
+    model = StudentMLP(d_input=4, d_ff=512, d_output=1, depth=6).to(device)
     
     # 3. Handle DataParallel Weights loading
     print(f"Loading weights from {MODEL_WEIGHTS}...")
@@ -175,7 +175,7 @@ def main():
     plt.title('ROC Curve - KD Engineered Student', fontsize=14)
     plt.legend(loc="lower right", fontsize=12)
     plt.grid(alpha=0.3)
-    plt.savefig('roc_curve_kd_engineered.png', dpi=300, bbox_inches='tight')
+    plt.savefig('roc_curve_kd_engineered_depth6.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("✓ Saved ROC Curve to 'roc_curve_kd_engineered.png'")
 
@@ -194,7 +194,7 @@ def main():
     plt.title('KD Engineered Student Output Distribution', fontsize=14)
     plt.legend(loc='upper center', fontsize=12)
     plt.grid(alpha=0.3)
-    plt.savefig('prob_dist_kd_engineered.png', dpi=300, bbox_inches='tight')
+    plt.savefig('prob_dist_kd_engineered_depth6.png', dpi=300, bbox_inches='tight')
     plt.close()
     print("✓ Saved Probability Distribution to 'prob_dist_kd_engineered.png'")
 
