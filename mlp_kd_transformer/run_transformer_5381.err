@@ -1,0 +1,106 @@
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:56: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_blocks)
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:249: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:280: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_transformer/mlp_kd_transformer.py:56: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True
+  self.encoder = nn.TransformerEncoder(encoder_layer, num_layers=num_blocks)

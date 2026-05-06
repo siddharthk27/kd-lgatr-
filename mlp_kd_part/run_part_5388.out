@@ -1,0 +1,118 @@
+[2026-05-06 21:27:58] part run=v1  d_model=64 nheads=4 nblocks=4 ffn=256
+[2026-05-06 21:27:58] beta=0.0  epochs=50  bs=256  seed=42  cache=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets
+[2026-05-06 21:27:58] jobid=5388  host=csis.cn1  out=runs/v1
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] cache_dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True | hint_mode=False | inv_cache_complete=True
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load + smoke test
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] ParT-style | in_dim=11 | d_model=64 num_heads=4 num_blocks=4 ffn=256 pair_hidden=32 | params=205,349
+
+--- Training: 50 epochs, BS 256, alpha=0.7, T=2.0, use_pairwise=True ---
+
+epoch   1/50 | loss=2.1858 (soft=3.0272 hard=0.2227) | val AUC=0.9804 rej@0.3=781 rej@0.5=209 | lr=3.00e-04 | 263.8s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   2/50 | loss=0.9767 (soft=1.3214 hard=0.1723) | val AUC=0.9821 rej@0.3=912 rej@0.5=232 | lr=2.99e-04 | 263.7s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   3/50 | loss=0.8221 (soft=1.1033 hard=0.1660) | val AUC=0.9833 rej@0.3=1244 rej@0.5=286 | lr=2.97e-04 | 263.5s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   4/50 | loss=0.7179 (soft=0.9562 hard=0.1619) | val AUC=0.9839 rej@0.3=1380 rej@0.5=329 | lr=2.95e-04 | 263.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   5/50 | loss=0.6365 (soft=0.8413 hard=0.1586) | val AUC=0.9843 rej@0.3=1460 rej@0.5=327 | lr=2.93e-04 | 264.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   6/50 | loss=0.5644 (soft=0.7395 hard=0.1558) | val AUC=0.9849 rej@0.3=1652 rej@0.5=353 | lr=2.89e-04 | 263.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   7/50 | loss=0.5109 (soft=0.6640 hard=0.1538) | val AUC=0.9848 rej@0.3=1515 rej@0.5=349 | lr=2.86e-04 | 262.5s
+epoch   8/50 | loss=0.4754 (soft=0.6138 hard=0.1525) | val AUC=0.9853 rej@0.3=1625 rej@0.5=388 | lr=2.81e-04 | 263.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch   9/50 | loss=0.4464 (soft=0.5729 hard=0.1512) | val AUC=0.9852 rej@0.3=1883 rej@0.5=380 | lr=2.77e-04 | 263.3s
+epoch  10/50 | loss=0.4225 (soft=0.5392 hard=0.1504) | val AUC=0.9853 rej@0.3=1737 rej@0.5=389 | lr=2.71e-04 | 262.4s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  11/50 | loss=0.4012 (soft=0.5090 hard=0.1496) | val AUC=0.9855 rej@0.3=1938 rej@0.5=413 | lr=2.66e-04 | 263.3s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  12/50 | loss=0.3852 (soft=0.4864 hard=0.1491) | val AUC=0.9856 rej@0.3=1976 rej@0.5=414 | lr=2.59e-04 | 264.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  13/50 | loss=0.3701 (soft=0.4651 hard=0.1484) | val AUC=0.9857 rej@0.3=2015 rej@0.5=433 | lr=2.53e-04 | 262.9s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  14/50 | loss=0.3575 (soft=0.4474 hard=0.1479) | val AUC=0.9859 rej@0.3=1995 rej@0.5=450 | lr=2.46e-04 | 263.7s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  15/50 | loss=0.3454 (soft=0.4302 hard=0.1475) | val AUC=0.9859 rej@0.3=1938 rej@0.5=454 | lr=2.38e-04 | 262.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  16/50 | loss=0.3355 (soft=0.4162 hard=0.1472) | val AUC=0.9860 rej@0.3=2056 rej@0.5=442 | lr=2.30e-04 | 263.9s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  17/50 | loss=0.3267 (soft=0.4038 hard=0.1468) | val AUC=0.9860 rej@0.3=2077 rej@0.5=462 | lr=2.22e-04 | 262.4s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  18/50 | loss=0.3194 (soft=0.3934 hard=0.1465) | val AUC=0.9860 rej@0.3=2214 rej@0.5=440 | lr=2.14e-04 | 263.6s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  19/50 | loss=0.3121 (soft=0.3833 hard=0.1460) | val AUC=0.9860 rej@0.3=2167 rej@0.5=459 | lr=2.05e-04 | 263.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  20/50 | loss=0.3062 (soft=0.3749 hard=0.1461) | val AUC=0.9861 rej@0.3=2343 rej@0.5=451 | lr=1.96e-04 | 262.9s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  21/50 | loss=0.3006 (soft=0.3669 hard=0.1458) | val AUC=0.9862 rej@0.3=2121 rej@0.5=474 | lr=1.87e-04 | 262.7s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  22/50 | loss=0.2952 (soft=0.3593 hard=0.1456) | val AUC=0.9861 rej@0.3=2099 rej@0.5=466 | lr=1.78e-04 | 263.4s
+epoch  23/50 | loss=0.2892 (soft=0.3509 hard=0.1454) | val AUC=0.9860 rej@0.3=2099 rej@0.5=459 | lr=1.69e-04 | 263.1s
+epoch  24/50 | loss=0.2850 (soft=0.3448 hard=0.1453) | val AUC=0.9862 rej@0.3=2316 rej@0.5=472 | lr=1.59e-04 | 263.0s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  25/50 | loss=0.2808 (soft=0.3390 hard=0.1451) | val AUC=0.9862 rej@0.3=2167 rej@0.5=468 | lr=1.50e-04 | 262.9s
+epoch  26/50 | loss=0.2770 (soft=0.3338 hard=0.1447) | val AUC=0.9863 rej@0.3=2371 rej@0.5=461 | lr=1.41e-04 | 262.5s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  27/50 | loss=0.2732 (soft=0.3283 hard=0.1447) | val AUC=0.9863 rej@0.3=2264 rej@0.5=464 | lr=1.31e-04 | 263.2s
+epoch  28/50 | loss=0.2697 (soft=0.3233 hard=0.1446) | val AUC=0.9863 rej@0.3=2264 rej@0.5=458 | lr=1.22e-04 | 262.8s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  29/50 | loss=0.2667 (soft=0.3191 hard=0.1445) | val AUC=0.9863 rej@0.3=2214 rej@0.5=465 | lr=1.13e-04 | 263.6s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  30/50 | loss=0.2638 (soft=0.3150 hard=0.1444) | val AUC=0.9862 rej@0.3=2264 rej@0.5=468 | lr=1.04e-04 | 263.6s
+epoch  31/50 | loss=0.2613 (soft=0.3114 hard=0.1443) | val AUC=0.9862 rej@0.3=2077 rej@0.5=455 | lr=9.48e-05 | 262.1s
+epoch  32/50 | loss=0.2583 (soft=0.3072 hard=0.1440) | val AUC=0.9863 rej@0.3=2264 rej@0.5=469 | lr=8.61e-05 | 263.7s
+epoch  33/50 | loss=0.2564 (soft=0.3046 hard=0.1441) | val AUC=0.9864 rej@0.3=2316 rej@0.5=460 | lr=7.77e-05 | 262.7s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  34/50 | loss=0.2545 (soft=0.3018 hard=0.1439) | val AUC=0.9864 rej@0.3=2343 rej@0.5=466 | lr=6.96e-05 | 263.1s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  35/50 | loss=0.2521 (soft=0.2985 hard=0.1439) | val AUC=0.9863 rej@0.3=2239 rej@0.5=466 | lr=6.18e-05 | 263.0s
+epoch  36/50 | loss=0.2499 (soft=0.2954 hard=0.1438) | val AUC=0.9863 rej@0.3=2316 rej@0.5=470 | lr=5.44e-05 | 263.0s
+epoch  37/50 | loss=0.2483 (soft=0.2932 hard=0.1437) | val AUC=0.9863 rej@0.3=2239 rej@0.5=474 | lr=4.73e-05 | 262.8s
+epoch  38/50 | loss=0.2469 (soft=0.2912 hard=0.1436) | val AUC=0.9864 rej@0.3=2316 rej@0.5=468 | lr=4.07e-05 | 263.0s
+epoch  39/50 | loss=0.2458 (soft=0.2896 hard=0.1436) | val AUC=0.9863 rej@0.3=2290 rej@0.5=465 | lr=3.44e-05 | 262.9s
+epoch  40/50 | loss=0.2444 (soft=0.2877 hard=0.1435) | val AUC=0.9864 rej@0.3=2343 rej@0.5=469 | lr=2.86e-05 | 263.4s
+epoch  41/50 | loss=0.2431 (soft=0.2858 hard=0.1435) | val AUC=0.9864 rej@0.3=2239 rej@0.5=471 | lr=2.34e-05 | 262.8s
+epoch  42/50 | loss=0.2424 (soft=0.2849 hard=0.1434) | val AUC=0.9864 rej@0.3=2264 rej@0.5=469 | lr=1.86e-05 | 263.7s
+epoch  43/50 | loss=0.2412 (soft=0.2830 hard=0.1435) | val AUC=0.9864 rej@0.3=2343 rej@0.5=480 | lr=1.43e-05 | 263.4s
+  -> new best val AUC, saved to runs/v1/part_student_best.pt
+epoch  44/50 | loss=0.2408 (soft=0.2825 hard=0.1434) | val AUC=0.9864 rej@0.3=2343 rej@0.5=468 | lr=1.05e-05 | 263.4s
+epoch  45/50 | loss=0.2402 (soft=0.2817 hard=0.1434) | val AUC=0.9864 rej@0.3=2290 rej@0.5=474 | lr=7.34e-06 | 263.4s
+epoch  46/50 | loss=0.2392 (soft=0.2804 hard=0.1432) | val AUC=0.9864 rej@0.3=2316 rej@0.5=470 | lr=4.71e-06 | 263.0s
+epoch  47/50 | loss=0.2388 (soft=0.2797 hard=0.1433) | val AUC=0.9864 rej@0.3=2290 rej@0.5=474 | lr=2.66e-06 | 262.8s
+epoch  48/50 | loss=0.2392 (soft=0.2803 hard=0.1433) | val AUC=0.9864 rej@0.3=2264 rej@0.5=476 | lr=1.18e-06 | 263.8s
+epoch  49/50 | loss=0.2388 (soft=0.2798 hard=0.1432) | val AUC=0.9864 rej@0.3=2290 rej@0.5=475 | lr=2.96e-07 | 263.1s
+epoch  50/50 | loss=0.2390 (soft=0.2801 hard=0.1433) | val AUC=0.9864 rej@0.3=2290 rej@0.5=474 | lr=0.00e+00 | 263.1s
+
+[final] loading best-val checkpoint (val AUC=0.9864) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9869 | rej@0.3=2433  rej@0.5=567  rej@0.8=67
+[2026-05-07 01:08:49] training done. eval ...
+[eval] device=cuda
+[eval] use_pairwise=True | in_dim=11
+[eval] loaded ckpt from epoch 43 (val AUC=0.9864076980309632)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD ParT-STYLE STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9869
+Optimal Threshold:       0.4992
+Calibrated Accuracy:     0.9422
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      2433
+  @ 50% Signal Eff:      567
+  @ 80% Signal Eff:      67
+==================================================
+[eval] wrote runs/v1/roc_curve_part.png
+[eval] wrote runs/v1/prob_dist_part.png
+[2026-05-07 01:09:48] part v1 done.

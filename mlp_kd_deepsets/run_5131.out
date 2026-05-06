@@ -1,0 +1,170 @@
+[2026-05-01 11:00:00] starting on csis.cn2 jobid=5131
+[setup] CUDA_VISIBLE_DEVICES=1
+NVIDIA A100 80GB PCIe, 81920 MiB, 570.158.01
+NVIDIA A100 80GB PCIe, 81920 MiB, 570.158.01
+[2026-05-01 11:00:00] teacher smoke test ...
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] teacher cache dir=. | cache_complete=False
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] loaded from model_run0_it174999.pt | missing=0 unexpected=0
+[smoke] running teacher over 2048 val jets ...
+[smoke] teacher AUC on 2048 val jets = 0.9852  (expected ~0.987; if << 0.95 the teacher interface is wrong)
+[2026-05-01 11:00:12] smoke test passed.
+[2026-05-01 11:00:12] training ...
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] teacher cache dir=. | cache_complete=False
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] loaded from model_run0_it174999.pt | missing=0 unexpected=0
+[smoke] running teacher over 2048 val jets ...
+[smoke] teacher AUC on 2048 val jets = 0.9852  (expected ~0.987; if << 0.95 the teacher interface is wrong)
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[cache] computing train teacher logits over 1211000 jets ...
+  [cache:train] 25600/1211000  elapsed=11.5s
+  [cache:train] 51200/1211000  elapsed=22.5s
+  [cache:train] 76800/1211000  elapsed=33.5s
+  [cache:train] 102400/1211000  elapsed=44.6s
+  [cache:train] 128000/1211000  elapsed=55.5s
+  [cache:train] 153600/1211000  elapsed=66.4s
+  [cache:train] 179200/1211000  elapsed=77.2s
+  [cache:train] 204800/1211000  elapsed=88.1s
+  [cache:train] 230400/1211000  elapsed=98.9s
+  [cache:train] 256000/1211000  elapsed=109.7s
+  [cache:train] 281600/1211000  elapsed=120.5s
+  [cache:train] 307200/1211000  elapsed=131.4s
+  [cache:train] 332800/1211000  elapsed=142.2s
+  [cache:train] 358400/1211000  elapsed=153.1s
+  [cache:train] 384000/1211000  elapsed=163.9s
+  [cache:train] 409600/1211000  elapsed=174.7s
+  [cache:train] 435200/1211000  elapsed=185.6s
+  [cache:train] 460800/1211000  elapsed=196.4s
+  [cache:train] 486400/1211000  elapsed=207.2s
+  [cache:train] 512000/1211000  elapsed=218.0s
+  [cache:train] 537600/1211000  elapsed=228.9s
+  [cache:train] 563200/1211000  elapsed=239.9s
+  [cache:train] 588800/1211000  elapsed=250.8s
+  [cache:train] 614400/1211000  elapsed=261.6s
+  [cache:train] 640000/1211000  elapsed=272.4s
+  [cache:train] 665600/1211000  elapsed=283.2s
+  [cache:train] 691200/1211000  elapsed=294.1s
+  [cache:train] 716800/1211000  elapsed=304.9s
+  [cache:train] 742400/1211000  elapsed=315.7s
+  [cache:train] 768000/1211000  elapsed=326.4s
+  [cache:train] 793600/1211000  elapsed=337.2s
+  [cache:train] 819200/1211000  elapsed=348.0s
+  [cache:train] 844800/1211000  elapsed=358.9s
+  [cache:train] 870400/1211000  elapsed=369.7s
+  [cache:train] 896000/1211000  elapsed=380.4s
+  [cache:train] 921600/1211000  elapsed=391.3s
+  [cache:train] 947200/1211000  elapsed=402.1s
+  [cache:train] 972800/1211000  elapsed=412.9s
+  [cache:train] 998400/1211000  elapsed=423.8s
+  [cache:train] 1024000/1211000  elapsed=434.6s
+  [cache:train] 1049600/1211000  elapsed=445.4s
+  [cache:train] 1075200/1211000  elapsed=456.2s
+  [cache:train] 1100800/1211000  elapsed=467.1s
+  [cache:train] 1126400/1211000  elapsed=477.8s
+  [cache:train] 1152000/1211000  elapsed=488.7s
+  [cache:train] 1177600/1211000  elapsed=499.5s
+  [cache:train] 1203200/1211000  elapsed=510.4s
+[cache:train] done in 513.8s
+[cache] computing val teacher logits over 403000 jets ...
+  [cache:val] 25600/403000  elapsed=11.3s
+  [cache:val] 51200/403000  elapsed=22.1s
+  [cache:val] 76800/403000  elapsed=33.0s
+  [cache:val] 102400/403000  elapsed=43.8s
+  [cache:val] 128000/403000  elapsed=54.6s
+  [cache:val] 153600/403000  elapsed=65.5s
+  [cache:val] 179200/403000  elapsed=76.3s
+  [cache:val] 204800/403000  elapsed=87.1s
+  [cache:val] 230400/403000  elapsed=98.0s
+  [cache:val] 256000/403000  elapsed=108.8s
+  [cache:val] 281600/403000  elapsed=119.6s
+  [cache:val] 307200/403000  elapsed=130.5s
+  [cache:val] 332800/403000  elapsed=141.2s
+  [cache:val] 358400/403000  elapsed=152.0s
+  [cache:val] 384000/403000  elapsed=162.8s
+[cache:val] done in 171.0s
+[teacher] full val AUC (from cache) = 0.9865
+[student] DeepSets PFN | params=166,913
+
+--- Training: 30 epochs, BS 512, alpha=0.7, T=2.0 ---
+
+epoch   1/30 | loss=2.5230 (soft=3.4991 hard=0.2455) | val AUC=0.9775 rej@0.3=568 rej@0.5=162 | lr=2.99e-04 | 23.1s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   2/30 | loss=1.2799 (soft=1.7470 hard=0.1900) | val AUC=0.9796 rej@0.3=752 rej@0.5=197 | lr=2.97e-04 | 22.8s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   3/30 | loss=1.1463 (soft=1.5591 hard=0.1831) | val AUC=0.9802 rej@0.3=796 rej@0.5=203 | lr=2.93e-04 | 22.2s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   4/30 | loss=1.0740 (soft=1.4572 hard=0.1799) | val AUC=0.9808 rej@0.3=793 rej@0.5=213 | lr=2.87e-04 | 22.3s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   5/30 | loss=1.0287 (soft=1.3932 hard=0.1781) | val AUC=0.9810 rej@0.3=861 rej@0.5=217 | lr=2.80e-04 | 21.7s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   6/30 | loss=0.9914 (soft=1.3408 hard=0.1762) | val AUC=0.9812 rej@0.3=843 rej@0.5=226 | lr=2.71e-04 | 22.3s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   7/30 | loss=0.9653 (soft=1.3040 hard=0.1752) | val AUC=0.9815 rej@0.3=826 rej@0.5=231 | lr=2.61e-04 | 22.0s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch   8/30 | loss=0.9425 (soft=1.2718 hard=0.1741) | val AUC=0.9813 rej@0.3=809 rej@0.5=228 | lr=2.50e-04 | 22.0s
+epoch   9/30 | loss=0.9232 (soft=1.2447 hard=0.1732) | val AUC=0.9815 rej@0.3=900 rej@0.5=226 | lr=2.38e-04 | 21.5s
+epoch  10/30 | loss=0.9059 (soft=1.2202 hard=0.1726) | val AUC=0.9818 rej@0.3=896 rej@0.5=241 | lr=2.25e-04 | 21.2s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  11/30 | loss=0.8886 (soft=1.1959 hard=0.1717) | val AUC=0.9819 rej@0.3=964 rej@0.5=249 | lr=2.11e-04 | 21.5s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  12/30 | loss=0.8756 (soft=1.1774 hard=0.1712) | val AUC=0.9819 rej@0.3=933 rej@0.5=237 | lr=1.96e-04 | 21.6s
+epoch  13/30 | loss=0.8620 (soft=1.1584 hard=0.1706) | val AUC=0.9819 rej@0.3=920 rej@0.5=238 | lr=1.81e-04 | 21.7s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  14/30 | loss=0.8498 (soft=1.1412 hard=0.1700) | val AUC=0.9820 rej@0.3=942 rej@0.5=242 | lr=1.66e-04 | 21.5s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  15/30 | loss=0.8394 (soft=1.1265 hard=0.1695) | val AUC=0.9820 rej@0.3=942 rej@0.5=239 | lr=1.50e-04 | 21.6s
+epoch  16/30 | loss=0.8284 (soft=1.1109 hard=0.1691) | val AUC=0.9821 rej@0.3=993 rej@0.5=253 | lr=1.34e-04 | 21.3s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  17/30 | loss=0.8202 (soft=1.0994 hard=0.1687) | val AUC=0.9821 rej@0.3=964 rej@0.5=255 | lr=1.19e-04 | 22.2s
+epoch  18/30 | loss=0.8094 (soft=1.0841 hard=0.1684) | val AUC=0.9823 rej@0.3=969 rej@0.5=256 | lr=1.04e-04 | 22.6s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  19/30 | loss=0.8023 (soft=1.0742 hard=0.1679) | val AUC=0.9822 rej@0.3=955 rej@0.5=242 | lr=8.90e-05 | 22.1s
+epoch  20/30 | loss=0.7943 (soft=1.0629 hard=0.1675) | val AUC=0.9825 rej@0.3=969 rej@0.5=264 | lr=7.50e-05 | 21.6s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  21/30 | loss=0.7884 (soft=1.0545 hard=0.1674) | val AUC=0.9824 rej@0.3=993 rej@0.5=251 | lr=6.18e-05 | 21.6s
+epoch  22/30 | loss=0.7818 (soft=1.0453 hard=0.1670) | val AUC=0.9825 rej@0.3=1013 rej@0.5=263 | lr=4.96e-05 | 21.6s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  23/30 | loss=0.7770 (soft=1.0385 hard=0.1667) | val AUC=0.9825 rej@0.3=1003 rej@0.5=261 | lr=3.85e-05 | 21.6s
+epoch  24/30 | loss=0.7721 (soft=1.0317 hard=0.1664) | val AUC=0.9826 rej@0.3=1018 rej@0.5=265 | lr=2.86e-05 | 21.6s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  25/30 | loss=0.7679 (soft=1.0257 hard=0.1664) | val AUC=0.9826 rej@0.3=998 rej@0.5=260 | lr=2.01e-05 | 22.2s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  26/30 | loss=0.7645 (soft=1.0209 hard=0.1662) | val AUC=0.9826 rej@0.3=1008 rej@0.5=262 | lr=1.30e-05 | 22.2s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  27/30 | loss=0.7620 (soft=1.0174 hard=0.1661) | val AUC=0.9826 rej@0.3=998 rej@0.5=262 | lr=7.34e-06 | 21.2s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  28/30 | loss=0.7595 (soft=1.0139 hard=0.1659) | val AUC=0.9826 rej@0.3=1013 rej@0.5=266 | lr=3.28e-06 | 22.1s
+  -> new best val AUC, saved to deepsets_student_best.pt
+epoch  29/30 | loss=0.7587 (soft=1.0128 hard=0.1660) | val AUC=0.9826 rej@0.3=1003 rej@0.5=266 | lr=8.22e-07 | 22.0s
+epoch  30/30 | loss=0.7577 (soft=1.0113 hard=0.1659) | val AUC=0.9826 rej@0.3=998 rej@0.5=265 | lr=0.00e+00 | 21.5s
+
+[final] loading best-val checkpoint (val AUC=0.9826) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9833 | rej@0.3=1188  rej@0.5=290  rej@0.8=45
+[2026-05-01 11:23:12] training done. Running final eval...
+[eval] device=cuda
+[eval] loaded ckpt from epoch 28 (val AUC=0.9826211008218408)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD DEEPSETS STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9833
+Optimal Threshold:       0.5328
+Calibrated Accuracy:     0.9349
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      1188
+  @ 50% Signal Eff:      290
+  @ 80% Signal Eff:      45
+==================================================
+[eval] wrote roc_curve_deepsets.png
+[eval] wrote prob_dist_deepsets.png
+[eval] wrote test_metrics.json
+[2026-05-01 11:23:27] all done.

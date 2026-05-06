@@ -1,0 +1,92 @@
+[2026-05-06 03:44:01] xform run=v1_s43  d_model=64 nheads=4 nblocks=4 ffn=256
+[2026-05-06 03:44:01] beta=0.0  epochs=30  seed=43  cache=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets
+[2026-05-06 03:44:01] jobid=5382  host=csis.cn1  out=runs/v1_s43
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=43
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] cache_dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True | hint_mode=False | inv_cache_complete=True
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load + smoke test
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] Transformer | in_dim=11 | d_model=64 num_heads=4 num_blocks=4 ffn=256 | params=205,057
+
+--- Training: 30 epochs, BS 512, alpha=0.7, T=2.0, use_pairwise=True ---
+
+epoch   1/30 | loss=3.3091 (soft=4.6095 hard=0.2749) | val AUC=0.9741 rej@0.3=394 rej@0.5=116 | lr=2.99e-04 | 94.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   2/30 | loss=1.5833 (soft=2.1743 hard=0.2045) | val AUC=0.9779 rej@0.3=640 rej@0.5=165 | lr=2.97e-04 | 94.5s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   3/30 | loss=1.3563 (soft=1.8550 hard=0.1926) | val AUC=0.9787 rej@0.3=712 rej@0.5=184 | lr=2.93e-04 | 93.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   4/30 | loss=1.1889 (soft=1.6195 hard=0.1842) | val AUC=0.9810 rej@0.3=790 rej@0.5=218 | lr=2.87e-04 | 93.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   5/30 | loss=1.0726 (soft=1.4562 hard=0.1776) | val AUC=0.9802 rej@0.3=865 rej@0.5=216 | lr=2.80e-04 | 93.9s
+epoch   6/30 | loss=0.9914 (soft=1.3418 hard=0.1737) | val AUC=0.9813 rej@0.3=865 rej@0.5=222 | lr=2.71e-04 | 94.4s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   7/30 | loss=0.9394 (soft=1.2686 hard=0.1714) | val AUC=0.9819 rej@0.3=1033 rej@0.5=244 | lr=2.61e-04 | 94.2s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   8/30 | loss=0.8992 (soft=1.2119 hard=0.1696) | val AUC=0.9823 rej@0.3=983 rej@0.5=253 | lr=2.50e-04 | 93.8s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch   9/30 | loss=0.8661 (soft=1.1652 hard=0.1682) | val AUC=0.9818 rej@0.3=1013 rej@0.5=257 | lr=2.38e-04 | 94.7s
+epoch  10/30 | loss=0.8363 (soft=1.1233 hard=0.1668) | val AUC=0.9815 rej@0.3=1066 rej@0.5=256 | lr=2.25e-04 | 94.4s
+epoch  11/30 | loss=0.8110 (soft=1.0874 hard=0.1659) | val AUC=0.9828 rej@0.3=1158 rej@0.5=269 | lr=2.11e-04 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  12/30 | loss=0.7888 (soft=1.0561 hard=0.1650) | val AUC=0.9829 rej@0.3=1275 rej@0.5=284 | lr=1.96e-04 | 93.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  13/30 | loss=0.7680 (soft=1.0268 hard=0.1642) | val AUC=0.9827 rej@0.3=1214 rej@0.5=296 | lr=1.81e-04 | 93.7s
+epoch  14/30 | loss=0.7499 (soft=1.0012 hard=0.1636) | val AUC=0.9833 rej@0.3=1252 rej@0.5=298 | lr=1.66e-04 | 93.7s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  15/30 | loss=0.7340 (soft=0.9788 hard=0.1628) | val AUC=0.9832 rej@0.3=1244 rej@0.5=301 | lr=1.50e-04 | 94.1s
+epoch  16/30 | loss=0.7183 (soft=0.9567 hard=0.1621) | val AUC=0.9835 rej@0.3=1399 rej@0.5=311 | lr=1.34e-04 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  17/30 | loss=0.7042 (soft=0.9368 hard=0.1616) | val AUC=0.9835 rej@0.3=1362 rej@0.5=315 | lr=1.19e-04 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  18/30 | loss=0.6932 (soft=0.9212 hard=0.1612) | val AUC=0.9836 rej@0.3=1300 rej@0.5=308 | lr=1.04e-04 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  19/30 | loss=0.6815 (soft=0.9046 hard=0.1608) | val AUC=0.9837 rej@0.3=1362 rej@0.5=313 | lr=8.90e-05 | 93.6s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  20/30 | loss=0.6723 (soft=0.8917 hard=0.1603) | val AUC=0.9837 rej@0.3=1429 rej@0.5=321 | lr=7.50e-05 | 93.8s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  21/30 | loss=0.6648 (soft=0.8811 hard=0.1602) | val AUC=0.9837 rej@0.3=1450 rej@0.5=324 | lr=6.18e-05 | 94.0s
+epoch  22/30 | loss=0.6563 (soft=0.8692 hard=0.1597) | val AUC=0.9838 rej@0.3=1362 rej@0.5=324 | lr=4.96e-05 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  23/30 | loss=0.6490 (soft=0.8587 hard=0.1596) | val AUC=0.9838 rej@0.3=1450 rej@0.5=322 | lr=3.85e-05 | 93.7s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  24/30 | loss=0.6445 (soft=0.8524 hard=0.1593) | val AUC=0.9839 rej@0.3=1439 rej@0.5=327 | lr=2.86e-05 | 93.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  25/30 | loss=0.6395 (soft=0.8453 hard=0.1591) | val AUC=0.9838 rej@0.3=1409 rej@0.5=331 | lr=2.01e-05 | 93.7s
+epoch  26/30 | loss=0.6356 (soft=0.8399 hard=0.1590) | val AUC=0.9839 rej@0.3=1429 rej@0.5=327 | lr=1.30e-05 | 93.8s
+epoch  27/30 | loss=0.6335 (soft=0.8370 hard=0.1588) | val AUC=0.9839 rej@0.3=1419 rej@0.5=325 | lr=7.34e-06 | 93.9s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  28/30 | loss=0.6303 (soft=0.8325 hard=0.1586) | val AUC=0.9839 rej@0.3=1450 rej@0.5=328 | lr=3.28e-06 | 94.0s
+  -> new best val AUC, saved to runs/v1_s43/transformer_student_best.pt
+epoch  29/30 | loss=0.6300 (soft=0.8320 hard=0.1587) | val AUC=0.9839 rej@0.3=1429 rej@0.5=329 | lr=8.22e-07 | 93.8s
+epoch  30/30 | loss=0.6290 (soft=0.8306 hard=0.1586) | val AUC=0.9839 rej@0.3=1439 rej@0.5=329 | lr=0.00e+00 | 93.8s
+
+[final] loading best-val checkpoint (val AUC=0.9839) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9845 | rej@0.3=1496  rej@0.5=373  rej@0.8=51
+[2026-05-06 04:31:48] training done. eval ...
+[eval] device=cuda
+[eval] use_pairwise=True | in_dim=11
+[eval] loaded ckpt from epoch 28 (val AUC=0.9839162759786773)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD TRANSFORMER STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9845
+Optimal Threshold:       0.4770
+Calibrated Accuracy:     0.9369
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      1496
+  @ 50% Signal Eff:      373
+  @ 80% Signal Eff:      51
+==================================================
+[eval] wrote runs/v1_s43/roc_curve_transformer.png
+[eval] wrote runs/v1_s43/prob_dist_transformer.png
+[2026-05-06 04:32:19] xform v1_s43 done.

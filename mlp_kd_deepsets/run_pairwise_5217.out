@@ -1,0 +1,95 @@
+[2026-05-02 16:43:30] pairwise run=v1pair  alpha=0.7  T=2.0  epochs=30  seed=42
+[2026-05-02 16:43:30] jobid=5217  host=csis.cn1  out=pairwise/v1pair
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] teacher cache dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True | hint_mode=False | inv_cache_complete=True
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load + smoke test
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] in_dim=11 (use_pairwise=True)
+[student] DeepSets PFN | params=167,425
+
+--- Training: 30 epochs, BS 512, alpha=0.7, T=2.0 ---
+
+epoch   1/30 | loss=3.4343 (soft=4.7824 hard=0.2888) | val AUC=0.9722 rej@0.3=356 rej@0.5=101 | lr=2.99e-04 | 32.8s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   2/30 | loss=1.7352 (soft=2.3864 hard=0.2157) | val AUC=0.9755 rej@0.3=530 rej@0.5=140 | lr=2.97e-04 | 29.3s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   3/30 | loss=1.4857 (soft=2.0356 hard=0.2026) | val AUC=0.9771 rej@0.3=519 rej@0.5=148 | lr=2.93e-04 | 31.2s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   4/30 | loss=1.3117 (soft=1.7913 hard=0.1926) | val AUC=0.9793 rej@0.3=712 rej@0.5=189 | lr=2.87e-04 | 31.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   5/30 | loss=1.1751 (soft=1.5995 hard=0.1848) | val AUC=0.9794 rej@0.3=816 rej@0.5=202 | lr=2.80e-04 | 30.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   6/30 | loss=1.0764 (soft=1.4606 hard=0.1799) | val AUC=0.9803 rej@0.3=735 rej@0.5=199 | lr=2.71e-04 | 30.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   7/30 | loss=1.0185 (soft=1.3791 hard=0.1770) | val AUC=0.9810 rej@0.3=892 rej@0.5=220 | lr=2.61e-04 | 32.1s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   8/30 | loss=0.9751 (soft=1.3181 hard=0.1750) | val AUC=0.9812 rej@0.3=865 rej@0.5=221 | lr=2.50e-04 | 32.3s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch   9/30 | loss=0.9373 (soft=1.2648 hard=0.1731) | val AUC=0.9807 rej@0.3=796 rej@0.5=213 | lr=2.38e-04 | 30.4s
+epoch  10/30 | loss=0.9122 (soft=1.2295 hard=0.1719) | val AUC=0.9819 rej@0.3=942 rej@0.5=242 | lr=2.25e-04 | 30.0s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  11/30 | loss=0.8886 (soft=1.1962 hard=0.1709) | val AUC=0.9820 rej@0.3=969 rej@0.5=246 | lr=2.11e-04 | 29.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  12/30 | loss=0.8666 (soft=1.1651 hard=0.1699) | val AUC=0.9820 rej@0.3=929 rej@0.5=241 | lr=1.96e-04 | 30.8s
+epoch  13/30 | loss=0.8489 (soft=1.1403 hard=0.1691) | val AUC=0.9820 rej@0.3=998 rej@0.5=250 | lr=1.81e-04 | 30.6s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  14/30 | loss=0.8306 (soft=1.1144 hard=0.1682) | val AUC=0.9820 rej@0.3=937 rej@0.5=250 | lr=1.66e-04 | 29.7s
+epoch  15/30 | loss=0.8159 (soft=1.0937 hard=0.1676) | val AUC=0.9820 rej@0.3=1033 rej@0.5=261 | lr=1.50e-04 | 29.3s
+epoch  16/30 | loss=0.8009 (soft=1.0726 hard=0.1670) | val AUC=0.9825 rej@0.3=1119 rej@0.5=273 | lr=1.34e-04 | 29.7s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  17/30 | loss=0.7875 (soft=1.0537 hard=0.1663) | val AUC=0.9825 rej@0.3=1078 rej@0.5=257 | lr=1.19e-04 | 29.1s
+epoch  18/30 | loss=0.7755 (soft=1.0368 hard=0.1658) | val AUC=0.9827 rej@0.3=1113 rej@0.5=272 | lr=1.04e-04 | 29.5s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  19/30 | loss=0.7644 (soft=1.0210 hard=0.1655) | val AUC=0.9827 rej@0.3=1165 rej@0.5=277 | lr=8.90e-05 | 30.6s
+epoch  20/30 | loss=0.7527 (soft=1.0045 hard=0.1649) | val AUC=0.9826 rej@0.3=1165 rej@0.5=263 | lr=7.50e-05 | 31.1s
+epoch  21/30 | loss=0.7428 (soft=0.9906 hard=0.1644) | val AUC=0.9828 rej@0.3=1192 rej@0.5=274 | lr=6.18e-05 | 29.8s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  22/30 | loss=0.7346 (soft=0.9792 hard=0.1641) | val AUC=0.9829 rej@0.3=1192 rej@0.5=279 | lr=4.96e-05 | 30.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  23/30 | loss=0.7273 (soft=0.9688 hard=0.1637) | val AUC=0.9829 rej@0.3=1158 rej@0.5=275 | lr=3.85e-05 | 29.2s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  24/30 | loss=0.7196 (soft=0.9580 hard=0.1633) | val AUC=0.9829 rej@0.3=1158 rej@0.5=274 | lr=2.86e-05 | 30.1s
+epoch  25/30 | loss=0.7146 (soft=0.9509 hard=0.1631) | val AUC=0.9830 rej@0.3=1178 rej@0.5=286 | lr=2.01e-05 | 30.6s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  26/30 | loss=0.7092 (soft=0.9433 hard=0.1629) | val AUC=0.9830 rej@0.3=1199 rej@0.5=275 | lr=1.30e-05 | 30.9s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  27/30 | loss=0.7056 (soft=0.9383 hard=0.1627) | val AUC=0.9830 rej@0.3=1214 rej@0.5=279 | lr=7.34e-06 | 30.3s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  28/30 | loss=0.7026 (soft=0.9341 hard=0.1625) | val AUC=0.9831 rej@0.3=1192 rej@0.5=283 | lr=3.28e-06 | 30.5s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  29/30 | loss=0.7010 (soft=0.9318 hard=0.1626) | val AUC=0.9831 rej@0.3=1165 rej@0.5=287 | lr=8.22e-07 | 29.3s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+epoch  30/30 | loss=0.7001 (soft=0.9306 hard=0.1624) | val AUC=0.9831 rej@0.3=1178 rej@0.5=282 | lr=0.00e+00 | 30.8s
+  -> new best val AUC, saved to pairwise/v1pair/deepsets_student_best.pt
+
+[final] loading best-val checkpoint (val AUC=0.9831) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9837 | rej@0.3=1195  rej@0.5=311  rej@0.8=47
+[2026-05-02 16:59:23] training done. eval ...
+[eval] device=cuda
+[eval] use_pairwise=True | in_dim=11
+[eval] loaded ckpt from epoch 30 (val AUC=0.9830798495612365)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD DEEPSETS STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9837
+Optimal Threshold:       0.5292
+Calibrated Accuracy:     0.9357
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      1195
+  @ 50% Signal Eff:      311
+  @ 80% Signal Eff:      47
+==================================================
+[eval] wrote pairwise/v1pair/roc_curve_deepsets.png
+[eval] wrote pairwise/v1pair/prob_dist_deepsets.png
+[eval] wrote pairwise/v1pair/test_metrics.json
+[2026-05-02 16:59:41] pairwise v1pair done.

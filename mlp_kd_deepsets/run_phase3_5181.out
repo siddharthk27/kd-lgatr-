@@ -1,0 +1,164 @@
+[2026-05-02 04:15:31] phase3 run=beta05  beta=0.5  alpha=0.7  T=2.0  epochs=30  seed=42
+[2026-05-02 04:15:31] jobid=5181  host=csis.cn1  out=phase3/beta05
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] teacher cache dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True | hint_mode=True | inv_cache_complete=False
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] loaded from model_run0_it174999.pt | missing=0 unexpected=0
+[smoke] running teacher over 2048 val jets ...
+[smoke] teacher AUC on 2048 val jets = 0.9852  (expected ~0.987; if << 0.95 the teacher interface is wrong)
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[cache] logits already at /nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets/teacher_logits_train.pt; computing only invariants
+[cache] computing train teacher invariants (existing logits preserved) over 1211000 jets ...
+  [cache:train] 25600/1211000  elapsed=11.4s
+  [cache:train] 51200/1211000  elapsed=22.3s
+  [cache:train] 76800/1211000  elapsed=33.2s
+  [cache:train] 102400/1211000  elapsed=44.2s
+  [cache:train] 128000/1211000  elapsed=55.1s
+  [cache:train] 153600/1211000  elapsed=66.1s
+  [cache:train] 179200/1211000  elapsed=77.0s
+  [cache:train] 204800/1211000  elapsed=87.9s
+  [cache:train] 230400/1211000  elapsed=98.9s
+  [cache:train] 256000/1211000  elapsed=109.8s
+  [cache:train] 281600/1211000  elapsed=120.7s
+  [cache:train] 307200/1211000  elapsed=131.7s
+  [cache:train] 332800/1211000  elapsed=142.6s
+  [cache:train] 358400/1211000  elapsed=153.5s
+  [cache:train] 384000/1211000  elapsed=164.4s
+  [cache:train] 409600/1211000  elapsed=175.4s
+  [cache:train] 435200/1211000  elapsed=186.3s
+  [cache:train] 460800/1211000  elapsed=197.2s
+  [cache:train] 486400/1211000  elapsed=208.2s
+  [cache:train] 512000/1211000  elapsed=219.1s
+  [cache:train] 537600/1211000  elapsed=230.1s
+  [cache:train] 563200/1211000  elapsed=241.3s
+  [cache:train] 588800/1211000  elapsed=252.2s
+  [cache:train] 614400/1211000  elapsed=263.1s
+  [cache:train] 640000/1211000  elapsed=274.0s
+  [cache:train] 665600/1211000  elapsed=285.0s
+  [cache:train] 691200/1211000  elapsed=295.9s
+  [cache:train] 716800/1211000  elapsed=306.8s
+  [cache:train] 742400/1211000  elapsed=317.6s
+  [cache:train] 768000/1211000  elapsed=328.5s
+  [cache:train] 793600/1211000  elapsed=339.4s
+  [cache:train] 819200/1211000  elapsed=350.3s
+  [cache:train] 844800/1211000  elapsed=361.2s
+  [cache:train] 870400/1211000  elapsed=372.1s
+  [cache:train] 896000/1211000  elapsed=383.0s
+  [cache:train] 921600/1211000  elapsed=394.0s
+  [cache:train] 947200/1211000  elapsed=404.9s
+  [cache:train] 972800/1211000  elapsed=415.8s
+  [cache:train] 998400/1211000  elapsed=426.8s
+  [cache:train] 1024000/1211000  elapsed=437.6s
+  [cache:train] 1049600/1211000  elapsed=448.5s
+  [cache:train] 1075200/1211000  elapsed=459.4s
+  [cache:train] 1100800/1211000  elapsed=470.2s
+  [cache:train] 1126400/1211000  elapsed=481.1s
+  [cache:train] 1152000/1211000  elapsed=491.9s
+  [cache:train] 1177600/1211000  elapsed=502.8s
+  [cache:train] 1203200/1211000  elapsed=513.7s
+[cache:train] done in 517.2s
+[cache:train] max |fresh - cached| logit drift = 1.97e-01
+[cache] logits already at /nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets/teacher_logits_val.pt; computing only invariants
+[cache] computing val teacher invariants (existing logits preserved) over 403000 jets ...
+  [cache:val] 25600/403000  elapsed=11.2s
+  [cache:val] 51200/403000  elapsed=22.2s
+  [cache:val] 76800/403000  elapsed=33.1s
+  [cache:val] 102400/403000  elapsed=44.0s
+  [cache:val] 128000/403000  elapsed=54.9s
+  [cache:val] 153600/403000  elapsed=65.8s
+  [cache:val] 179200/403000  elapsed=76.7s
+  [cache:val] 204800/403000  elapsed=87.6s
+  [cache:val] 230400/403000  elapsed=98.5s
+  [cache:val] 256000/403000  elapsed=109.5s
+  [cache:val] 281600/403000  elapsed=120.4s
+  [cache:val] 307200/403000  elapsed=131.4s
+  [cache:val] 332800/403000  elapsed=142.3s
+  [cache:val] 358400/403000  elapsed=153.3s
+  [cache:val] 384000/403000  elapsed=164.2s
+[cache:val] done in 172.4s
+[cache:val] max |fresh - cached| logit drift = 1.71e-01
+[teacher] full val AUC (from cache) = 0.9865
+[student] DeepSets PFN | params=166,913 + hint_proj=55,728
+
+--- Training: 30 epochs, BS 512, alpha=0.7, T=2.0, hint_beta=0.5 ---
+
+epoch   1/30 | loss=5.7615 (soft=3.5709 hard=0.2486 hint=6.3745) | val AUC=0.9753 rej@0.3=422 rej@0.5=121 | lr=2.99e-04 | 41.9s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   2/30 | loss=2.4003 (soft=1.7914 hard=0.1912 hint=2.1779) | val AUC=0.9798 rej@0.3=760 rej@0.5=192 | lr=2.97e-04 | 41.7s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   3/30 | loss=2.0606 (soft=1.5707 hard=0.1834 hint=1.8123) | val AUC=0.9798 rej@0.3=781 rej@0.5=196 | lr=2.93e-04 | 40.8s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   4/30 | loss=1.8945 (soft=1.4647 hard=0.1799 hint=1.6306) | val AUC=0.9807 rej@0.3=775 rej@0.5=216 | lr=2.87e-04 | 40.5s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   5/30 | loss=1.7898 (soft=1.3936 hard=0.1777 hint=1.5218) | val AUC=0.9807 rej@0.3=840 rej@0.5=223 | lr=2.80e-04 | 39.8s
+epoch   6/30 | loss=1.7226 (soft=1.3447 hard=0.1762 hint=1.4570) | val AUC=0.9806 rej@0.3=803 rej@0.5=216 | lr=2.71e-04 | 41.2s
+epoch   7/30 | loss=1.6667 (soft=1.3018 hard=0.1748 hint=1.4060) | val AUC=0.9813 rej@0.3=872 rej@0.5=237 | lr=2.61e-04 | 39.8s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   8/30 | loss=1.6234 (soft=1.2682 hard=0.1739 hint=1.3671) | val AUC=0.9814 rej@0.3=816 rej@0.5=237 | lr=2.50e-04 | 40.3s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch   9/30 | loss=1.5835 (soft=1.2367 hard=0.1730 hint=1.3319) | val AUC=0.9817 rej@0.3=937 rej@0.5=228 | lr=2.38e-04 | 40.5s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  10/30 | loss=1.5529 (soft=1.2131 hard=0.1721 hint=1.3041) | val AUC=0.9818 rej@0.3=955 rej@0.5=245 | lr=2.25e-04 | 40.0s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  11/30 | loss=1.5248 (soft=1.1905 hard=0.1716 hint=1.2798) | val AUC=0.9817 rej@0.3=888 rej@0.5=246 | lr=2.11e-04 | 39.9s
+epoch  12/30 | loss=1.5019 (soft=1.1709 hard=0.1709 hint=1.2619) | val AUC=0.9820 rej@0.3=969 rej@0.5=255 | lr=1.96e-04 | 40.2s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  13/30 | loss=1.4795 (soft=1.1526 hard=0.1704 hint=1.2431) | val AUC=0.9820 rej@0.3=937 rej@0.5=247 | lr=1.81e-04 | 40.6s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  14/30 | loss=1.4585 (soft=1.1353 hard=0.1699 hint=1.2257) | val AUC=0.9820 rej@0.3=946 rej@0.5=254 | lr=1.66e-04 | 40.5s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  15/30 | loss=1.4393 (soft=1.1192 hard=0.1692 hint=1.2102) | val AUC=0.9821 rej@0.3=964 rej@0.5=248 | lr=1.50e-04 | 39.9s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  16/30 | loss=1.4207 (soft=1.1031 hard=0.1688 hint=1.1958) | val AUC=0.9820 rej@0.3=973 rej@0.5=245 | lr=1.34e-04 | 40.9s
+epoch  17/30 | loss=1.4069 (soft=1.0922 hard=0.1685 hint=1.1836) | val AUC=0.9823 rej@0.3=993 rej@0.5=258 | lr=1.19e-04 | 39.6s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  18/30 | loss=1.3914 (soft=1.0786 hard=0.1681 hint=1.1720) | val AUC=0.9823 rej@0.3=1049 rej@0.5=260 | lr=1.04e-04 | 40.9s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  19/30 | loss=1.3805 (soft=1.0699 hard=0.1678 hint=1.1624) | val AUC=0.9822 rej@0.3=978 rej@0.5=250 | lr=8.90e-05 | 40.8s
+epoch  20/30 | loss=1.3670 (soft=1.0582 hard=0.1673 hint=1.1521) | val AUC=0.9824 rej@0.3=973 rej@0.5=258 | lr=7.50e-05 | 39.9s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  21/30 | loss=1.3561 (soft=1.0493 hard=0.1670 hint=1.1431) | val AUC=0.9824 rej@0.3=983 rej@0.5=257 | lr=6.18e-05 | 40.3s
+epoch  22/30 | loss=1.3453 (soft=1.0396 hard=0.1668 hint=1.1352) | val AUC=0.9825 rej@0.3=1008 rej@0.5=261 | lr=4.96e-05 | 40.8s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  23/30 | loss=1.3370 (soft=1.0331 hard=0.1665 hint=1.1278) | val AUC=0.9825 rej@0.3=1028 rej@0.5=261 | lr=3.85e-05 | 40.0s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  24/30 | loss=1.3286 (soft=1.0259 hard=0.1663 hint=1.1211) | val AUC=0.9826 rej@0.3=1044 rej@0.5=262 | lr=2.86e-05 | 40.0s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  25/30 | loss=1.3226 (soft=1.0214 hard=0.1661 hint=1.1157) | val AUC=0.9826 rej@0.3=1028 rej@0.5=262 | lr=2.01e-05 | 39.5s
+epoch  26/30 | loss=1.3168 (soft=1.0164 hard=0.1661 hint=1.1110) | val AUC=0.9826 rej@0.3=1028 rej@0.5=264 | lr=1.30e-05 | 40.1s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  27/30 | loss=1.3131 (soft=1.0135 hard=0.1659 hint=1.1076) | val AUC=0.9826 rej@0.3=1055 rej@0.5=262 | lr=7.34e-06 | 39.7s
+epoch  28/30 | loss=1.3091 (soft=1.0100 hard=0.1657 hint=1.1048) | val AUC=0.9826 rej@0.3=1055 rej@0.5=266 | lr=3.28e-06 | 40.6s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  29/30 | loss=1.3074 (soft=1.0087 hard=0.1658 hint=1.1031) | val AUC=0.9826 rej@0.3=1044 rej@0.5=266 | lr=8.22e-07 | 40.2s
+  -> new best val AUC, saved to phase3/beta05/deepsets_student_best.pt
+epoch  30/30 | loss=1.3056 (soft=1.0068 hard=0.1657 hint=1.1022) | val AUC=0.9826 rej@0.3=1044 rej@0.5=266 | lr=0.00e+00 | 40.3s
+
+[final] loading best-val checkpoint (val AUC=0.9826) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9833 | rej@0.3=1141  rej@0.5=289  rej@0.8=45
+[2026-05-02 04:47:46] training done. eval ...
+[eval] device=cuda
+[eval] loaded ckpt from epoch 29 (val AUC=0.9826365626250695)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD DEEPSETS STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9833
+Optimal Threshold:       0.4976
+Calibrated Accuracy:     0.9348
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      1141
+  @ 50% Signal Eff:      289
+  @ 80% Signal Eff:      45
+==================================================
+[eval] wrote phase3/beta05/roc_curve_deepsets.png
+[eval] wrote phase3/beta05/prob_dist_deepsets.png
+[eval] wrote phase3/beta05/test_metrics.json
+[2026-05-02 04:48:02] phase3 beta05 done.

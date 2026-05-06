@@ -1,0 +1,22 @@
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:418: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:469: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  scheduler.step()
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:449: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():

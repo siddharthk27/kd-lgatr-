@@ -1,0 +1,97 @@
+[2026-05-01 11:48:48] ablation=T2_a09  alpha=0.9  T=2.0  epochs=30  seed=42
+[2026-05-01 11:48:48] cache=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets  out=ablations/T2_a09  jobid=5134  host=csis.cn3
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] teacher cache dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load + smoke test
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] DeepSets PFN | params=166,913
+
+--- Training: 30 epochs, BS 512, alpha=0.9, T=2.0 ---
+
+epoch   1/30 | loss=3.2232 (soft=3.5538 hard=0.2476) | val AUC=0.9764 rej@0.3=504 rej@0.5=133 | lr=2.99e-04 | 23.0s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   2/30 | loss=1.5964 (soft=1.7527 hard=0.1897) | val AUC=0.9790 rej@0.3=646 rej@0.5=178 | lr=2.97e-04 | 22.8s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   3/30 | loss=1.4250 (soft=1.5630 hard=0.1832) | val AUC=0.9801 rej@0.3=781 rej@0.5=210 | lr=2.93e-04 | 22.8s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   4/30 | loss=1.3358 (soft=1.4643 hard=0.1800) | val AUC=0.9802 rej@0.3=784 rej@0.5=209 | lr=2.87e-04 | 23.2s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   5/30 | loss=1.2812 (soft=1.4038 hard=0.1783) | val AUC=0.9808 rej@0.3=809 rej@0.5=220 | lr=2.80e-04 | 22.6s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   6/30 | loss=1.2354 (soft=1.3530 hard=0.1766) | val AUC=0.9811 rej@0.3=861 rej@0.5=232 | lr=2.71e-04 | 22.6s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   7/30 | loss=1.2000 (soft=1.3138 hard=0.1754) | val AUC=0.9813 rej@0.3=847 rej@0.5=237 | lr=2.61e-04 | 24.0s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   8/30 | loss=1.1681 (soft=1.2785 hard=0.1743) | val AUC=0.9814 rej@0.3=850 rej@0.5=243 | lr=2.50e-04 | 23.8s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch   9/30 | loss=1.1436 (soft=1.2514 hard=0.1735) | val AUC=0.9814 rej@0.3=857 rej@0.5=229 | lr=2.38e-04 | 23.0s
+epoch  10/30 | loss=1.1203 (soft=1.2255 hard=0.1729) | val AUC=0.9816 rej@0.3=916 rej@0.5=236 | lr=2.25e-04 | 23.0s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  11/30 | loss=1.1018 (soft=1.2051 hard=0.1721) | val AUC=0.9817 rej@0.3=912 rej@0.5=231 | lr=2.11e-04 | 23.0s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  12/30 | loss=1.0820 (soft=1.1832 hard=0.1715) | val AUC=0.9817 rej@0.3=920 rej@0.5=237 | lr=1.96e-04 | 22.9s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  13/30 | loss=1.0641 (soft=1.1634 hard=0.1708) | val AUC=0.9819 rej@0.3=920 rej@0.5=242 | lr=1.81e-04 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  14/30 | loss=1.0525 (soft=1.1505 hard=0.1705) | val AUC=0.9817 rej@0.3=892 rej@0.5=244 | lr=1.66e-04 | 22.4s
+epoch  15/30 | loss=1.0358 (soft=1.1320 hard=0.1699) | val AUC=0.9820 rej@0.3=933 rej@0.5=262 | lr=1.50e-04 | 22.6s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  16/30 | loss=1.0213 (soft=1.1159 hard=0.1695) | val AUC=0.9822 rej@0.3=888 rej@0.5=254 | lr=1.34e-04 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  17/30 | loss=1.0110 (soft=1.1045 hard=0.1690) | val AUC=0.9822 rej@0.3=904 rej@0.5=253 | lr=1.19e-04 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  18/30 | loss=0.9975 (soft=1.0897 hard=0.1686) | val AUC=0.9823 rej@0.3=973 rej@0.5=258 | lr=1.04e-04 | 22.2s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  19/30 | loss=0.9886 (soft=1.0798 hard=0.1681) | val AUC=0.9824 rej@0.3=973 rej@0.5=265 | lr=8.90e-05 | 22.5s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  20/30 | loss=0.9782 (soft=1.0682 hard=0.1678) | val AUC=0.9824 rej@0.3=933 rej@0.5=261 | lr=7.50e-05 | 22.4s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  21/30 | loss=0.9697 (soft=1.0588 hard=0.1676) | val AUC=0.9824 rej@0.3=988 rej@0.5=262 | lr=6.18e-05 | 22.2s
+epoch  22/30 | loss=0.9629 (soft=1.0513 hard=0.1673) | val AUC=0.9824 rej@0.3=933 rej@0.5=261 | lr=4.96e-05 | 22.1s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  23/30 | loss=0.9555 (soft=1.0431 hard=0.1671) | val AUC=0.9824 rej@0.3=973 rej@0.5=262 | lr=3.85e-05 | 22.4s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  24/30 | loss=0.9494 (soft=1.0363 hard=0.1668) | val AUC=0.9825 rej@0.3=946 rej@0.5=262 | lr=2.86e-05 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  25/30 | loss=0.9438 (soft=1.0302 hard=0.1667) | val AUC=0.9826 rej@0.3=969 rej@0.5=267 | lr=2.01e-05 | 22.4s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  26/30 | loss=0.9393 (soft=1.0251 hard=0.1666) | val AUC=0.9826 rej@0.3=964 rej@0.5=265 | lr=1.30e-05 | 22.5s
+epoch  27/30 | loss=0.9358 (soft=1.0213 hard=0.1663) | val AUC=0.9826 rej@0.3=955 rej@0.5=263 | lr=7.34e-06 | 22.5s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  28/30 | loss=0.9335 (soft=1.0187 hard=0.1664) | val AUC=0.9826 rej@0.3=960 rej@0.5=263 | lr=3.28e-06 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  29/30 | loss=0.9324 (soft=1.0175 hard=0.1663) | val AUC=0.9826 rej@0.3=973 rej@0.5=261 | lr=8.22e-07 | 22.5s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+epoch  30/30 | loss=0.9309 (soft=1.0158 hard=0.1662) | val AUC=0.9826 rej@0.3=969 rej@0.5=263 | lr=0.00e+00 | 22.3s
+  -> new best val AUC, saved to ablations/T2_a09/deepsets_student_best.pt
+
+[final] loading best-val checkpoint (val AUC=0.9826) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9832 | rej@0.3=1167  rej@0.5=284  rej@0.8=45
+[2026-05-01 12:00:38] training done. eval ...
+[eval] device=cuda
+[eval] loaded ckpt from epoch 30 (val AUC=0.9825921873749196)
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+
+==================================================
+ KD DEEPSETS STUDENT — TEST RESULTS 
+==================================================
+AUC:                     0.9832
+Optimal Threshold:       0.5350
+Calibrated Accuracy:     0.9348
+--------------------------------------------------
+Background Rejection (1 / e_B):
+  @ 30% Signal Eff:      1167
+  @ 50% Signal Eff:      284
+  @ 80% Signal Eff:      45
+==================================================
+[eval] wrote ablations/T2_a09/roc_curve_deepsets.png
+[eval] wrote ablations/T2_a09/prob_dist_deepsets.png
+[eval] wrote ablations/T2_a09/test_metrics.json
+[2026-05-01 12:00:53] ablation T2_a09 done.
