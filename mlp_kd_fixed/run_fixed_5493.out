@@ -1,0 +1,67 @@
+[2026-05-09 01:13:44] mlp_kd_fixed run=run_logit_mse  kd_loss=logit_mse  T=4.0  alpha=0.7
+[2026-05-09 01:13:44] epochs=30  bs=512  seed=42  cache=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets
+[2026-05-09 01:13:44] jobid=5493  host=csis.cn1  out=runs/run_logit_mse
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] kd_loss=logit_mse | alpha=0.7 | T=4.0
+[setup] teacher cache dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] flat MLP | depth=3 d_ff=512 max_p=128 | params=527,873
+
+--- Training: 30 epochs, BS 512, kd_loss=logit_mse, alpha=0.7, T=4.0 ---
+
+epoch   1/30 | loss=4.0563 (soft=5.6562 hard=0.3230) | val AUC=0.9565 rej@0.3=127 rej@0.5=45 | lr=2.99e-04 | 15.9s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   2/30 | loss=2.4468 (soft=3.3862 hard=0.2550) | val AUC=0.9659 rej@0.3=279 rej@0.5=82 | lr=2.97e-04 | 15.3s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   3/30 | loss=2.0518 (soft=2.8330 hard=0.2290) | val AUC=0.9692 rej@0.3=356 rej@0.5=96 | lr=2.93e-04 | 15.5s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   4/30 | loss=1.8668 (soft=2.5736 hard=0.2177) | val AUC=0.9704 rej@0.3=366 rej@0.5=105 | lr=2.87e-04 | 15.5s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   5/30 | loss=1.7464 (soft=2.4045 hard=0.2109) | val AUC=0.9712 rej@0.3=395 rej@0.5=112 | lr=2.80e-04 | 15.5s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   6/30 | loss=1.6602 (soft=2.2835 hard=0.2057) | val AUC=0.9721 rej@0.3=395 rej@0.5=118 | lr=2.71e-04 | 15.2s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   7/30 | loss=1.5919 (soft=2.1875 hard=0.2021) | val AUC=0.9725 rej@0.3=410 rej@0.5=119 | lr=2.61e-04 | 15.8s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   8/30 | loss=1.5354 (soft=2.1082 hard=0.1989) | val AUC=0.9727 rej@0.3=434 rej@0.5=122 | lr=2.50e-04 | 15.8s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch   9/30 | loss=1.4799 (soft=2.0303 hard=0.1958) | val AUC=0.9730 rej@0.3=435 rej@0.5=123 | lr=2.38e-04 | 16.0s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  10/30 | loss=1.4384 (soft=1.9720 hard=0.1934) | val AUC=0.9730 rej@0.3=431 rej@0.5=122 | lr=2.25e-04 | 15.2s
+epoch  11/30 | loss=1.4011 (soft=1.9196 hard=0.1913) | val AUC=0.9732 rej@0.3=431 rej@0.5=124 | lr=2.11e-04 | 15.5s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  12/30 | loss=1.3638 (soft=1.8673 hard=0.1891) | val AUC=0.9734 rej@0.3=430 rej@0.5=123 | lr=1.96e-04 | 14.9s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  13/30 | loss=1.3300 (soft=1.8198 hard=0.1872) | val AUC=0.9735 rej@0.3=436 rej@0.5=126 | lr=1.81e-04 | 15.4s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  14/30 | loss=1.2991 (soft=1.7762 hard=0.1858) | val AUC=0.9734 rej@0.3=431 rej@0.5=127 | lr=1.66e-04 | 15.2s
+epoch  15/30 | loss=1.2733 (soft=1.7401 hard=0.1841) | val AUC=0.9735 rej@0.3=435 rej@0.5=127 | lr=1.50e-04 | 15.3s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  16/30 | loss=1.2428 (soft=1.6972 hard=0.1825) | val AUC=0.9736 rej@0.3=439 rej@0.5=130 | lr=1.34e-04 | 14.8s
+  -> new best val AUC, saved to runs/run_logit_mse/mlp_student_best.pt
+epoch  17/30 | loss=1.2193 (soft=1.6641 hard=0.1812) | val AUC=0.9736 rej@0.3=443 rej@0.5=126 | lr=1.19e-04 | 15.4s
+epoch  18/30 | loss=1.1979 (soft=1.6342 hard=0.1800) | val AUC=0.9735 rej@0.3=451 rej@0.5=127 | lr=1.04e-04 | 15.2s
+epoch  19/30 | loss=1.1735 (soft=1.5999 hard=0.1784) | val AUC=0.9735 rej@0.3=431 rej@0.5=128 | lr=8.90e-05 | 14.8s
+epoch  20/30 | loss=1.1520 (soft=1.5696 hard=0.1776) | val AUC=0.9735 rej@0.3=431 rej@0.5=126 | lr=7.50e-05 | 14.8s
+epoch  21/30 | loss=1.1342 (soft=1.5447 hard=0.1763) | val AUC=0.9735 rej@0.3=436 rej@0.5=128 | lr=6.18e-05 | 15.0s
+epoch  22/30 | loss=1.1174 (soft=1.5210 hard=0.1755) | val AUC=0.9734 rej@0.3=432 rej@0.5=127 | lr=4.96e-05 | 14.4s
+epoch  23/30 | loss=1.1047 (soft=1.5032 hard=0.1747) | val AUC=0.9735 rej@0.3=436 rej@0.5=127 | lr=3.85e-05 | 14.8s
+epoch  24/30 | loss=1.0876 (soft=1.4791 hard=0.1740) | val AUC=0.9735 rej@0.3=419 rej@0.5=128 | lr=2.86e-05 | 14.8s
+epoch  25/30 | loss=1.0758 (soft=1.4626 hard=0.1732) | val AUC=0.9734 rej@0.3=437 rej@0.5=127 | lr=2.01e-05 | 14.1s
+epoch  26/30 | loss=1.0684 (soft=1.4522 hard=0.1729) | val AUC=0.9734 rej@0.3=421 rej@0.5=128 | lr=1.30e-05 | 13.6s
+epoch  27/30 | loss=1.0619 (soft=1.4431 hard=0.1724) | val AUC=0.9734 rej@0.3=425 rej@0.5=126 | lr=7.34e-06 | 13.8s
+epoch  28/30 | loss=1.0520 (soft=1.4291 hard=0.1720) | val AUC=0.9734 rej@0.3=413 rej@0.5=125 | lr=3.28e-06 | 13.9s
+epoch  29/30 | loss=1.0501 (soft=1.4264 hard=0.1720) | val AUC=0.9734 rej@0.3=420 rej@0.5=127 | lr=8.22e-07 | 13.8s
+epoch  30/30 | loss=1.0524 (soft=1.4298 hard=0.1718) | val AUC=0.9734 rej@0.3=417 rej@0.5=125 | lr=0.00e+00 | 13.8s
+
+[final] loading best-val checkpoint (val AUC=0.9736) ...
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[final] test AUC=0.9743 | rej@0.3=464  rej@0.5=137  rej@0.8=26
+[2026-05-09 01:21:44] mlp_kd_fixed run_logit_mse done.

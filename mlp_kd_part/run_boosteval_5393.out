@@ -1,0 +1,31 @@
+[2026-05-07 09:43:53] boost-eval  teacher=1  ckpt=  out=runs/teacher  bs=256
+[2026-05-07 09:43:53] jobid=5393  host=csis.cn2
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[boost-eval] device=cuda
+[boost-eval] betas: ['0.0000', '0.0500', '0.1000', '0.1500', '0.2000', '0.2500', '0.3000', '0.3500', '0.4000', '0.4500', '0.5000', '0.5500', '0.6000', '0.6500', '0.7000', '0.7500', '0.8000', '0.8500', '0.9000', '0.9500']
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[boost-eval] mode=teacher, attention_backend=xformers
+[teacher] loaded from model_run0_it174999.pt | missing=0 unexpected=0
+  beta=0.0000  auc=0.9870  rej@0.3=2433  rej@0.5=589  rej@0.8=67
+  beta=0.0500  auc=0.9869  rej@0.3=2493  rej@0.5=569  rej@0.8=66
+  beta=0.1000  auc=0.9866  rej@0.3=2294  rej@0.5=543  rej@0.8=63
+  beta=0.1500  auc=0.9858  rej@0.3=2294  rej@0.5=495  rej@0.8=58
+  beta=0.2000  auc=0.9847  rej@0.3=2195  rej@0.5=450  rej@0.8=53
+  beta=0.2500  auc=0.9832  rej@0.3=2103  rej@0.5=415  rej@0.8=48
+  beta=0.3000  auc=0.9815  rej@0.3=1941  rej@0.5=374  rej@0.8=43
+  beta=0.3500  auc=0.9800  rej@0.3=1836  rej@0.5=347  rej@0.8=39
+  beta=0.4000  auc=0.9786  rej@0.3=1711  rej@0.5=322  rej@0.8=36
+  beta=0.4500  auc=0.9773  rej@0.3=1669  rej@0.5=296  rej@0.8=33
+  beta=0.5000  auc=0.9762  rej@0.3=1541  rej@0.5=270  rej@0.8=30
+  beta=0.5500  auc=0.9752  rej@0.3=1374  rej@0.5=251  rej@0.8=28
+  beta=0.6000  auc=0.9743  rej@0.3=1195  rej@0.5=230  rej@0.8=27
+  beta=0.6500  auc=0.9735  rej@0.3=1122  rej@0.5=216  rej@0.8=25
+  beta=0.7000  auc=0.9727  rej@0.3=1074  rej@0.5=199  rej@0.8=24
+  beta=0.7500  auc=0.9718  rej@0.3=905  rej@0.5=181  rej@0.8=23
+  beta=0.8000  auc=0.9704  rej@0.3=751  rej@0.5=156  rej@0.8=21
+  beta=0.8500  auc=0.9675  rej@0.3=558  rej@0.5=125  rej@0.8=19
+  beta=0.9000  auc=0.9611  rej@0.3=344  rej@0.5=79  rej@0.8=15
+  beta=0.9500  auc=0.9436  rej@0.3=142  rej@0.5=35  rej@0.8=9
+[boost-eval] wrote runs/teacher/boost_results.json
+[2026-05-07 10:41:52] boost-eval done.

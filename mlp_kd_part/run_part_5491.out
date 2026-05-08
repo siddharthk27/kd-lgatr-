@@ -1,0 +1,23 @@
+[2026-05-09 00:36:36] part run=v1_softkl_T4  d_model=64 nheads=4 nblocks=4 ffn=256
+[2026-05-09 00:36:36] alpha=0.7  hint_beta=0.0  kd_loss=softmax_kl  T=4.0  epochs=50  bs=256  seed=42  cache=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets
+[2026-05-09 00:36:36] jobid=5491  host=csis.cn1  out=runs/v1_softkl_T4
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[setup] device=cuda | torch=2.11.0+cu128 | seed=42
+[setup] gpu=NVIDIA A100 80GB PCIe | vram=85.1GB
+[setup] cfg_data={'tagging_features': 'all', 'boost_jet': False, 'beam_reference': 'lightlike', 'two_beams': True, 'add_time_reference': True, 'mass_reg': 0.005, 'spurion_scale': 1, 'max_particles': None}
+[setup] cache_dir=/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_deepsets | cache_complete=True | hint_mode=False | inv_cache_complete=True
+[data:val] kin=(403000, 200, 4) lbl=(403000,) top_frac=0.500
+[teacher] cache present — skipping teacher load + smoke test
+[data:train] kin=(1211000, 200, 4) lbl=(1211000,) top_frac=0.500
+[teacher] full val AUC (from cache) = 0.9865
+[student] ParT-style | in_dim=11 | d_model=64 num_heads=4 num_blocks=4 ffn=256 pair_hidden=32 | params=205,349
+
+--- Training: 50 epochs, BS 256, alpha=0.7, T=4.0, kd_loss=softmax_kl, use_pairwise=True ---
+
+epoch   1/50 | loss=0.2557 (soft=0.2726 hard=0.2162) | val AUC=0.9802 rej@0.3=876 rej@0.5=215 | lr=3.00e-04 | 263.4s
+  -> new best val AUC, saved to runs/v1_softkl_T4/part_student_best.pt
+epoch   2/50 | loss=0.1363 (soft=0.1215 hard=0.1708) | val AUC=0.9823 rej@0.3=1107 rej@0.5=265 | lr=2.99e-04 | 261.9s
+  -> new best val AUC, saved to runs/v1_softkl_T4/part_student_best.pt
+epoch   3/50 | loss=0.1195 (soft=0.1003 hard=0.1643) | val AUC=0.9834 rej@0.3=1343 rej@0.5=300 | lr=2.97e-04 | 262.1s
+  -> new best val AUC, saved to runs/v1_softkl_T4/part_student_best.pt

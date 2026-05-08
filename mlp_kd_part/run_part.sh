@@ -18,7 +18,10 @@
 #   PT_EPOCHS    epochs (default 50)
 #   PT_BS        batch size (default 256 — pair tensors are memory-heavy)
 #   PT_SEED      seed (default 42)
+#   PT_ALPHA     KD soft-loss weight (default 0.7); set to 0.0 for from-scratch baseline
 #   PT_HINT_BETA hint loss weight, 0 disables (default 0)
+#   PT_KD_LOSS   KD soft-loss form: logit_mse | softmax_kl  (default logit_mse)
+#   PT_TEMPERATURE  KD temperature (default 2.0; tunable only for softmax_kl)
 #   PT_DMODEL / PT_NHEADS / PT_NBLOCKS / PT_FFN  override architecture
 
 set -euo pipefail
@@ -28,7 +31,10 @@ TAG="${PT_TAG:-v1}"
 EPOCHS="${PT_EPOCHS:-50}"
 BS="${PT_BS:-256}"
 SEED="${PT_SEED:-42}"
+ALPHA="${PT_ALPHA:-0.7}"
 HINT_BETA="${PT_HINT_BETA:-0.0}"
+KD_LOSS="${PT_KD_LOSS:-logit_mse}"
+TEMPERATURE="${PT_TEMPERATURE:-2.0}"
 DMODEL="${PT_DMODEL:-64}"
 NHEADS="${PT_NHEADS:-4}"
 NBLOCKS="${PT_NBLOCKS:-4}"
@@ -40,7 +46,7 @@ mkdir -p "$OUT_DIR"
 CACHE_DIR="$(realpath ../mlp_kd_deepsets)"
 
 echo "[$(date '+%F %T')] part run=$TAG  d_model=$DMODEL nheads=$NHEADS nblocks=$NBLOCKS ffn=$FFN"
-echo "[$(date '+%F %T')] beta=$HINT_BETA  epochs=$EPOCHS  bs=$BS  seed=$SEED  cache=$CACHE_DIR"
+echo "[$(date '+%F %T')] alpha=$ALPHA  hint_beta=$HINT_BETA  kd_loss=$KD_LOSS  T=$TEMPERATURE  epochs=$EPOCHS  bs=$BS  seed=$SEED  cache=$CACHE_DIR"
 echo "[$(date '+%F %T')] jobid=$SLURM_JOB_ID  host=$(hostname)  out=$OUT_DIR"
 nvidia-smi --query-gpu=name,memory.total --format=csv,noheader || true
 
@@ -57,8 +63,9 @@ $PY -u mlp_kd_part.py \
     --batch-size "$BS" \
     --lr 3e-4 \
     --weight-decay 1e-4 \
-    --alpha 0.7 \
-    --temperature 2.0 \
+    --alpha "$ALPHA" \
+    --temperature "$TEMPERATURE" \
+    --kd-loss "$KD_LOSS" \
     --d-model "$DMODEL" \
     --num-heads "$NHEADS" \
     --num-blocks "$NBLOCKS" \

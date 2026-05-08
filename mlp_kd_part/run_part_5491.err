@@ -1,0 +1,11 @@
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:421: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = torch.cuda.amp.GradScaler()
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:453: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:453: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:453: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/nfs_home/users/dhruvk/khare27/kd-lgatr-/mlp_kd_part/mlp_kd_part.py:453: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+slurmstepd: error: *** JOB 5491 ON csis.cn1 CANCELLED AT 2026-05-09T00:51:18 ***

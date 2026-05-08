@@ -271,6 +271,9 @@ def main():
     parser.add_argument("--weight-decay",   type=float, default=1e-4)
     parser.add_argument("--alpha",          type=float, default=0.7)
     parser.add_argument("--temperature",    type=float, default=2.0)
+    parser.add_argument("--kd-loss",        choices=["logit_mse", "softmax_kl"],
+                        default="logit_mse",
+                        help="KD soft-loss form: logit-MSE (T cancels) or softmax+KL (T tunable).")
     parser.add_argument("--num-workers",    type=int,   default=8)
     parser.add_argument("--seed",           type=int,   default=42)
     parser.add_argument("--d-model",        type=int,   default=64)
@@ -428,7 +431,8 @@ def main():
     best_path = out_dir / "part_student_best.pt"
 
     print(f"\n--- Training: {args.epochs} epochs, BS {args.batch_size}, "
-          f"alpha={args.alpha}, T={args.temperature}, use_pairwise={args.use_pairwise}"
+          f"alpha={args.alpha}, T={args.temperature}, kd_loss={args.kd_loss}, "
+          f"use_pairwise={args.use_pairwise}"
           + (f", hint_beta={args.hint_beta}" if hint_mode else "")
           + " ---\n")
     for epoch in range(1, args.epochs + 1):
@@ -460,6 +464,7 @@ def main():
                     s_log, t_log, lbl,
                     alpha=args.alpha, T=args.temperature,
                     student_hint=s_hint, teacher_hint=t_inv, beta=args.hint_beta,
+                    loss_type=args.kd_loss,
                 )
             scaler.scale(loss).backward()
             scaler.unscale_(optimizer)

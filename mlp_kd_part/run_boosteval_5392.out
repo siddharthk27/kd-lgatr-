@@ -1,0 +1,31 @@
+[2026-05-07 09:43:53] boost-eval  teacher=0  ckpt=runs/v1/part_student_best.pt  out=runs/v1  bs=256
+[2026-05-07 09:43:53] jobid=5392  host=csis.cn1
+NVIDIA A100 80GB PCIe, 81920 MiB
+NVIDIA A100 80GB PCIe, 81920 MiB
+[boost-eval] device=cuda
+[boost-eval] betas: ['0.0000', '0.0500', '0.1000', '0.1500', '0.2000', '0.2500', '0.3000', '0.3500', '0.4000', '0.4500', '0.5000', '0.5500', '0.6000', '0.6500', '0.7000', '0.7500', '0.8000', '0.8500', '0.9000', '0.9500']
+[data:test] kin=(404000, 200, 4) lbl=(404000,) top_frac=0.500
+[boost-eval] mode=student, checkpoint=runs/v1/part_student_best.pt
+[boost-eval] loaded ckpt epoch=43 val_auc=0.9864076980309632
+  beta=0.0000  auc=0.9869  rej@0.3=2433  rej@0.5=567  rej@0.8=67
+  beta=0.0500  auc=0.9868  rej@0.3=2404  rej@0.5=544  rej@0.8=66
+  beta=0.1000  auc=0.9864  rej@0.3=2294  rej@0.5=523  rej@0.8=63
+  beta=0.1500  auc=0.9856  rej@0.3=2082  rej@0.5=462  rej@0.8=58
+  beta=0.2000  auc=0.9839  rej@0.3=1905  rej@0.5=423  rej@0.8=51
+  beta=0.2500  auc=0.9816  rej@0.3=1756  rej@0.5=373  rej@0.8=45
+  beta=0.3000  auc=0.9789  rej@0.3=1602  rej@0.5=327  rej@0.8=39
+  beta=0.3500  auc=0.9759  rej@0.3=1442  rej@0.5=275  rej@0.8=33
+  beta=0.4000  auc=0.9729  rej@0.3=1262  rej@0.5=226  rej@0.8=28
+  beta=0.4500  auc=0.9696  rej@0.3=914  rej@0.5=183  rej@0.8=24
+  beta=0.5000  auc=0.9660  rej@0.3=682  rej@0.5=145  rej@0.8=20
+  beta=0.5500  auc=0.9620  rej@0.3=520  rej@0.5=111  rej@0.8=18
+  beta=0.6000  auc=0.9573  rej@0.3=400  rej@0.5=85  rej@0.8=15
+  beta=0.6500  auc=0.9516  rej@0.3=304  rej@0.5=65  rej@0.8=13
+  beta=0.7000  auc=0.9446  rej@0.3=221  rej@0.5=49  rej@0.8=11
+  beta=0.7500  auc=0.9356  rej@0.3=155  rej@0.5=38  rej@0.8=9
+  beta=0.8000  auc=0.9232  rej@0.3=110  rej@0.5=28  rej@0.8=7
+  beta=0.8500  auc=0.9060  rej@0.3=76  rej@0.5=20  rej@0.8=6
+  beta=0.9000  auc=0.8837  rej@0.3=50  rej@0.5=13  rej@0.8=5
+  beta=0.9500  auc=0.8527  rej@0.3=25  rej@0.5=9  rej@0.8=4
+[boost-eval] wrote runs/v1/boost_results.json
+[2026-05-07 09:59:44] boost-eval done.

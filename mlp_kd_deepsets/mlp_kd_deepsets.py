@@ -568,14 +568,26 @@ def _collate_for_teacher_only(batch):
 # KD loss (with optional penultimate-invariant hint term)
 # ============================================================
 def kd_loss(student_logits, teacher_logits, labels, alpha, T,
-            student_hint=None, teacher_hint=None, beta=0.0):
+            student_hint=None, teacher_hint=None, beta=0.0,
+            loss_type='logit_mse'):
     """
-    L = α · MSE(s/T, t/T) · T²  +  (1−α) · BCE(s, label)  +  β · MSE(proj(s_pool), t_invariants)
+    L = α · soft  +  (1−α) · BCE(s, label)  [+ β · MSE(proj(s_pool), t_invariants)]
 
-    Note: with logit-MSE the T dimension cancels exactly (Phase 2 confirmed this).
-    Kept for parametric continuity with Phase 1/2 outputs.
+    loss_type:
+      'logit_mse'   — soft = MSE(s/T, t/T) · T²    (T cancels exactly; F2)
+      'softmax_kl'  — soft = KL(p_t || p_s) · T², where p_· = softmax([0, z]/T)
+                      (canonical Hinton-style; T is a real lever here)
     """
-    soft = F.mse_loss(student_logits / T, teacher_logits.detach() / T) * (T * T)
+    if loss_type == 'logit_mse':
+        soft = F.mse_loss(student_logits / T, teacher_logits.detach() / T) * (T * T)
+    elif loss_type == 'softmax_kl':
+        s2 = torch.stack([torch.zeros_like(student_logits), student_logits], dim=-1) / T
+        t2 = torch.stack([torch.zeros_like(teacher_logits), teacher_logits.detach()], dim=-1) / T
+        log_p_s = F.log_softmax(s2, dim=-1)
+        p_t     = F.softmax(t2, dim=-1)
+        soft = F.kl_div(log_p_s, p_t, reduction='batchmean') * (T * T)
+    else:
+        raise ValueError(f"Unknown kd loss_type: {loss_type!r}")
     hard = F.binary_cross_entropy_with_logits(student_logits, labels.float())
     total = alpha * soft + (1.0 - alpha) * hard
 
